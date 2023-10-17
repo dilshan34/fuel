@@ -1,9 +1,6 @@
 package fuel.orderservice.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -33,11 +30,17 @@ public class FuelRegister {
     @Column(name = "st_city")
     private String city;
 
-    @Column(name = "st_is_registered")
+    @Column(name = "is_registered")
     private int isRegistered;
 
-    @Column(name = "st_start_date")
+    @Column(name = "st_create_date")
+    @Temporal(TemporalType.DATE)
     private Date stStartDate;
+
+    @PrePersist
+    private void onCreate(){
+        stStartDate=new Date();
+    }
 
     public int getStId() {
         return stId;
