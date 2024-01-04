@@ -1,0 +1,42 @@
+<div id="headline">
+  <h2>All Orders</h2>
+</div>
+<div>
+  <div class="row" id="card-body">
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">Total Dispatch Orders</h5>
+        <p id="card-text">
+          {{ size }}
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">Total Pending Orders</h5>
+        <p id="card-text">{{ pending }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-left: 10px">
+    <table class="table">
+      <tr style="background-color: rgb(174, 174, 180)">
+        <td>Station Name</td>
+        <td>Volume</td>
+        <td>Fuel Type</td>
+        <td>Received Date</td>
+        <td>Dispatch Date</td>
+      </tr>
+      <tbody>
+        <tr *ngFor="let item of res">
+          <td>{{ item.f_name }}</td>
+          <td>{{ item.f_capacity }}</td>
+          <td>{{ item.f_type }}</td>
+          <td>{{ item.submit_date }}</td>
+          <td>7/31/2022</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

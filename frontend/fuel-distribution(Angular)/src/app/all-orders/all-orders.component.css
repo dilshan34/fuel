@@ -1,0 +1,19 @@
+#headline{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#card-body{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+#card-text{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
